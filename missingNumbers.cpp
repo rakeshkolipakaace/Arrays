@@ -18,3 +18,23 @@ for (int i = 0; i <= n; i++) {  // Check each number from 0 to n
 return -1; 
 
 
+//optimal way 
+// Using math
+
+
+
+int n = nums.size();
+        int expectedSum = (n * (n + 1)) / 2;  
+        int actualSum = 0;
+
+        // Normal for loop
+        for (int i = 0; i < nums.size(); i++) {
+            actualSum += nums[i];
+        }
+
+        return expectedSum - actualSum;
+
+
+
+
+
