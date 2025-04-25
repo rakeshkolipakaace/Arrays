@@ -37,4 +37,12 @@ int n = nums.size();
 
 
 
+        //optimal way another XOR  method
+
+int missing = nums.size(); // Start with n
+for (int i = 0; i < nums.size(); i++) {
+    missing ^= i ^ nums[i]; // XOR index and value
+}
+return missing;
+
 
