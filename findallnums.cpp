@@ -27,3 +27,22 @@ class Solution {
             
         }
     };
+
+
+
+
+     //optimal way
+
+     int n = nums.size();
+     vector<int> sol;
+
+     for (int i = 0; i < n; i++) {
+         int idx = abs(nums[i]) - 1;
+         nums[idx] = -abs(nums[idx]);
+     }
+
+     for (int i = 0; i < n; i++) {
+         if (nums[i] > 0) sol.push_back(i + 1);
+     }
+
+     return sol;
